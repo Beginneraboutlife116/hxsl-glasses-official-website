@@ -1,5 +1,5 @@
-@import './layout/header.scss';
-@import './layout/footer.scss';
-
-
-@import './pages/index.scss';
+@use 'abstract';
+@use 'base';
+@use 'components';
+@use 'layouts';
+@use 'utilities';
