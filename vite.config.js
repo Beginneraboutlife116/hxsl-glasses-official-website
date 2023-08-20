@@ -3,6 +3,7 @@ import { ViteEjsPlugin } from "vite-plugin-ejs"
 import { fileURLToPath } from "node:url"
 import path from "node:path"
 import { glob } from "glob"
+import htmlPurge from "vite-plugin-purgecss"
 
 import liveReload from "vite-plugin-live-reload"
 
@@ -29,7 +30,8 @@ export default defineConfig({
   plugins: [
     liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
     ViteEjsPlugin(),
-    moveOutputPlugin()
+    moveOutputPlugin(),
+    htmlPurge({})
   ],
   server: {
     // 啟動 server 時預設開啟的頁面
