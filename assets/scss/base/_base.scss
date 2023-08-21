@@ -1,0 +1,9 @@
+@use "../abstract/" as *;
+
+body {
+  font-size: fs(400);
+  line-height: 1.5;
+  // ? 是否會因為中文字英文字而改變？
+  font-family: $ff-base;
+  font-weight: $fw-regular;
+}

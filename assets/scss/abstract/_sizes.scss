@@ -1,0 +1,48 @@
+@use "sass:map";
+
+$size: 0.25rem;
+$sizes: (
+  4: $size * 1,
+  8: $size * 2,
+  12: $size * 3,
+  14: $size * 3.5,
+  16: $size * 4,
+  20: $size * 5,
+  24: $size * 6,
+  28: $size * 7,
+  32: $size * 8,
+  36: $size * 9,
+  40: $size * 10,
+  48: $size * 12,
+  80: $size * 20,
+  96: $size * 24
+);
+
+// specific padding in different section or regions.
+$section-padding: clamp(
+  map.get($sizes, 40),
+  calc(0.11rem + 10.18vw),
+  map.get($sizes, 80)
+);
+$hero-padding: clamp(9rem, calc(-0.06rem + 38.68vw), 18.5rem);
+$navigation-padding-primary: map.get($sizes, 16);
+$navigation-padding-secondary: 0.8125rem;
+
+// $card-body-padding: clamp(2rem, calc(0.94rem + 3.375vw), 5rem);
+
+// gaps, no matter flex or grid for default
+$navigation-gap: 4rem;
+
+// $grid-default-gap: map.get($sizes, 32);
+// $flex-group-default-gap: map.get($sizes, 16);
+// $hero-button-gap: 1rem;
+// $section-inline-gap: 3rem;
+
+// container width
+$container-width-narrow: 36rem;
+$container-width: 81rem;
+$container-padding: clamp(
+  map.get($sizes, 14),
+  calc(-0.44rem + 5.6vw),
+  map.get($sizes, 36)
+);

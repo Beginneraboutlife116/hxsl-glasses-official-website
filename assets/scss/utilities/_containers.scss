@@ -1,0 +1,18 @@
+@use "../abstract/" as *;
+
+.container {
+  --container-padding: #{$container-padding};
+  --max-width: #{$container-width};
+
+  width: min(100% - 2 * var(--container-padding), var(--max-width));
+  margin-inline: auto;
+
+  &[data-type="full-bleed"] {
+    --max-width: 100%;
+    --container-padding: 0rem;
+  }
+
+  &[data-type="narrow"] {
+    --max-width: #{$container-width-narrow};
+  }
+}

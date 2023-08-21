@@ -1,0 +1,24 @@
+@use "../abstract/" as *;
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  font-weight: $fw-medium;
+  padding: 0.3em 0.6em;
+
+  &[data-type="accent"] {
+    background-color: clr(primary, "400");
+    color: clr(neutral, "100");
+  }
+
+  &[data-type="primary"] {
+    background-color: clr(neutral, "900");
+    color: clr(neutral, "100");
+  }
+
+  &[data-type="navigation"] {
+    font-family: $ff-accent;
+  }
+}
