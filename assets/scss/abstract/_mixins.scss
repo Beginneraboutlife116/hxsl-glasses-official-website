@@ -7,14 +7,14 @@
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
     $breakpoint: map.get($breakpoints, $size);
-    @media screen and (min-width: $breakpoint) {
+    @media screen and (width > $breakpoint) {
       @content;
     }
   } @else if meta.type-of($size) == number {
     @if math.is-unitless($size) {
       @error 'when using a number with @mq() make sure to include a unit';
     } @else {
-      @media screen and (min-width: $size) {
+      @media screen and (width > $size) {
         @content;
       }
     }

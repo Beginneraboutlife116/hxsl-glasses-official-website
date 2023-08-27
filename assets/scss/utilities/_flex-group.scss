@@ -1,0 +1,30 @@
+@use "../abstract/" as *;
+
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  column-gap: var(--column-gap, var(--flex-gap, var(--default-gap, 1rem)));
+  row-gap: var(--row-gap, var(--flex-gap, var(--default-gap, 1rem)));
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.v-center {
+    align-items: center;
+  }
+
+  &.mx-auto {
+    justify-content: center;
+  }
+
+  & > * {
+    flex-grow: 1;
+    flex-basis: var(--width, 100%);
+
+    @include mq(sm) {
+      flex-basis: var(--width, auto);
+    }
+  }
+}

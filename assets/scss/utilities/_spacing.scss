@@ -1,0 +1,60 @@
+@use "../abstract/" as *;
+
+.section {
+  padding-block: $section-padding;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+@each $size, $value in $sizes {
+  .m {
+    &x {
+      &-#{$size} {
+        margin-inline: $value;
+      }
+      &-start-#{$size} {
+        margin-inline-start: $value;
+      }
+      &-end-#{$size} {
+        margin-inline-end: $value;
+      }
+    }
+    &y {
+      &-#{$size} {
+        margin-block: $value;
+      }
+      &-start-#{$size} {
+        margin-block-start: $value;
+      }
+      &-end-#{$size} {
+        margin-block-end: $value;
+      }
+    }
+  }
+  .p {
+    &x {
+      &-#{$size} {
+        padding-inline: $value;
+      }
+      &-start-#{$size} {
+        padding-inline-start: $value;
+      }
+      &-end-#{$size} {
+        padding-inline-end: $value;
+      }
+    }
+    &y {
+      &-#{$size} {
+        padding-block: $value;
+      }
+      &-start-#{$size} {
+        padding-block-start: $value;
+      }
+      &-end-#{$size} {
+        padding-block-end: $value;
+      }
+    }
+  }
+}

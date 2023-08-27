@@ -1,0 +1,29 @@
+@use "../abstract/" as *;
+@use "../utilities/" as *;
+
+.primary-header {
+  @extend .container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: sz(16);
+
+  & picture {
+    width: 5rem;
+  }
+
+  @media (width <= 39.25em) {
+    picture {
+      margin-block-end: 1rem;
+      margin-inline-start: 1rem;
+    }
+  }
+
+  @media (width <= 25em) {
+    --container-padding: 0;
+
+    display: block;
+    padding-block-end: 0;
+  }
+}

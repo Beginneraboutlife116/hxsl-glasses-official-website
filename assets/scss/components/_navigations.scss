@@ -1,0 +1,18 @@
+@use "../abstract/" as *;
+
+.primary-navigation {
+  --column-gap: #{$navigation-gap};
+
+  @media (width <= 25em) {
+    --column-gap: 0;
+    --row-gap: 0;
+
+    & li {
+      --width: 50%;
+
+      border: 1px solid clr(neutral, "100");
+      padding-block: sz(12);
+      text-align: center;
+    }
+  }
+}

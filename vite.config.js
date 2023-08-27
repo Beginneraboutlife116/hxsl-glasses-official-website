@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url"
 import path from "node:path"
 import { glob } from "glob"
 import htmlPurge from "vite-plugin-purgecss"
+import postcssPresetEnv from "postcss-preset-env"
 
 import liveReload from "vite-plugin-live-reload"
 
@@ -31,7 +32,14 @@ export default defineConfig({
     liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
     ViteEjsPlugin(),
     moveOutputPlugin(),
-    htmlPurge({})
+    htmlPurge({}),
+    postcssPresetEnv({
+      stage: 3,
+      features: {
+        "logical-properties-and-values": false,
+        "opacity-percentage": true
+      }
+    })
   ],
   server: {
     // 啟動 server 時預設開啟的頁面
