@@ -1,0 +1,71 @@
+@use "../abstract/" as *;
+
+.primary-footer {
+  padding-block: sz(24);
+
+  @include mq(sm) {
+    padding-block: sz(48) sz(40);
+  }
+
+  @include mq(md) {
+    padding-block-end: sz(32);
+  }
+
+  &__phone,
+  &__mail {
+    img {
+      width: sz(24);
+    }
+
+    @include mq(sm) {
+      font-size: #{fs("700")};
+
+      img {
+        width: sz(48);
+      }
+    }
+  }
+
+  &__social-medias {
+    --column-gap: #{sz(8)};
+    align-self: flex-start;
+
+    @include mq(sm) {
+      --column-gap: #{sz(16)};
+
+      img {
+        width: sz(40);
+      }
+    }
+
+    @include mq(md) {
+      --column-gap: #{sz(32)};
+
+      img {
+        width: sz(48);
+      }
+    }
+  }
+
+  &__copyright {
+    --row-gap: #{sz(8)};
+    --width: 100%;
+
+    padding-block-start: #{sz(16)};
+
+    :last-child {
+      --column-gap: #{sz(48)};
+    }
+
+    @include mq(sm) {
+      --width: auto;
+
+      padding-block-start: #{sz(32)};
+      align-items: center;
+
+      & a {
+        font-size: fs("300");
+      }
+    }
+  }
+}

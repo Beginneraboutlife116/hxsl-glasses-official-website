@@ -11,6 +11,12 @@ a {
   color: clr("neutral", "100");
   text-decoration: none;
 
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
   @include mq(sm) {
     font-size: fs("550");
   }
