@@ -30,6 +30,10 @@
     --column-gap: #{sz(8)};
     align-self: flex-start;
 
+    img {
+      width: sz(24);
+    }
+
     @include mq(sm) {
       --column-gap: #{sz(16)};
 

@@ -2,7 +2,9 @@
 
 $size: 0.25rem;
 $sizes: (
+  2: $size * 0.5,
   4: $size * 1,
+  6: $size * 1.5,
   8: $size * 2,
   12: $size * 3,
   14: $size * 3.5,

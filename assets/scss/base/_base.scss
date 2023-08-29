@@ -5,6 +5,12 @@ body {
   line-height: 1.5;
   font-family: $ff-base;
   font-weight: $fw-regular;
+  scrollbar-width: none;
+  scrollbar-gutter: stable;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 a {
@@ -20,4 +26,12 @@ a {
   @include mq(sm) {
     font-size: fs("550");
   }
+}
+
+ul {
+  list-style: none;
+}
+
+::placeholder {
+  color: clr(neutral, "425");
 }

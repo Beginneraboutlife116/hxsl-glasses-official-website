@@ -15,11 +15,23 @@
     align-items: center;
   }
 
+  &.v-start {
+    align-items: start;
+  }
+
   &.mx-auto {
     justify-content: center;
   }
 
   & > * {
     flex-basis: var(--width, auto);
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &.no-wrap {
+    flex-wrap: nowrap;
   }
 }

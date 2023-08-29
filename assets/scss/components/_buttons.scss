@@ -21,4 +21,10 @@
   &[data-type="navigation"] {
     font-family: $ff-accent;
   }
+
+  &[data-type="bold"] {
+    color: clr(neutral, "100");
+    width: 100%;
+    padding-block: 1em;
+  }
 }

@@ -1,0 +1,18 @@
+@use "../abstract/" as *;
+@use "../utilities/" as *;
+
+.card {
+  @extend .box-shadow-1;
+  --row-gap: sz(8);
+  
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+
+  border-radius: sz(4);
+
+  &__img {
+    border-radius: sz(4) sz(4) 0 0;
+    object-fit: cover;
+    aspect-ratio: 174 / 153;
+  }
+}

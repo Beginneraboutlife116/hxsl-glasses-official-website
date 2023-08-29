@@ -8,6 +8,10 @@
   margin-inline: auto;
 }
 
+.my-start-auto {
+  margin-block-start: auto;
+}
+
 @each $size, $value in $sizes {
   .m {
     &x {
@@ -32,6 +36,9 @@
         margin-block-end: $value;
       }
     }
+    &-#{$size} {
+      margin: $value;
+    }
   }
   .p {
     &x {
@@ -55,6 +62,9 @@
       &-end-#{$size} {
         padding-block-end: $value;
       }
+    }
+    &-#{$size} {
+      padding: $value;
     }
   }
 }

@@ -1,5 +1,9 @@
 @use "../abstract/" as *;
 
+.b-1 {
+  border: 1px solid #000;
+}
+
 .by-end-1 {
   border-block-end: 1px solid clr(neutral, "100");
 }

@@ -1,0 +1,103 @@
+@use "../abstract/" as *;
+
+.home {
+  &__hero {
+    padding-block: $hero-padding;
+    background-image: url("../images/home-header-sm.png");
+    background-image: image-set(
+      "../images/home-header-sm.avif" type("image/avif"),
+      "../images/home-header-sm.webp" type("image/webp"),
+      "../images/home-header-sm.png" type("image/png")
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(sm) {
+      background-image: url("../images/home-header.png");
+      background-image: image-set(
+        "../images/home-header.avif" type("image/avif"),
+        "../images/home-header.webp" type("image/webp"),
+        "../images/home-header.png" type("image/png")
+      );
+    }
+  }
+
+  &__banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-image: url("../images/index-bg-sm.png");
+    background-image: image-set(
+      "../images/index-bg-sm.avif" type("image/avif"),
+      "../images/index-bg-sm.webp" type("image/webp"),
+      "../images/index-bg-sm.png" type("image/png")
+    );
+
+    @include mq(sm) {
+      background-image: url("../images/index-bg-md.png");
+      background-image: image-set(
+        "../images/index-bg-md.avif" type("image/avif"),
+        "../images/index-bg-md.webp" type("image/webp"),
+        "../images/index-bg-md.png" type("image/png")
+      );
+    }
+
+    @include mq(md) {
+      background-image: url("../images/index-bg.png");
+      background-image: image-set(
+        "../images/index-bg.avif" type("image/avif"),
+        "../images/index-bg.webp" type("image/webp"),
+        "../images/index-bg.png" type("image/png")
+      );
+    }
+
+    &--img {
+      width: 100%;
+      aspect-ratio: 1.45;
+      background-size: cover;
+
+      &[data-type="double"] {
+        background-image: url("../images/home-section4-1-sm.png");
+        background-image: image-set(
+          "../images/home-section4-1-sm.avif" type("image/avif"),
+          "../images/home-section4-1-sm.webp" type("image/webp"),
+          "../images/home-section4-1-sm.png" type("image/png")
+        );
+      }
+
+      &[data-type="youth"] {
+        background-image: url("../images/home-section4-2-sm.png");
+        background-image: image-set(
+          "../images/home-section4-2-sm.avif" type("image/avif"),
+          "../images/home-section4-2-sm.webp" type("image/webp"),
+          "../images/home-section4-2-sm.png" type("image/png")
+        );
+      }
+    }
+  }
+
+  &__title {
+    color: clr(primary, "400");
+    font-size: fs("800");
+    text-align: center;
+    font-style: italic;
+    font-weight: $fw-black;
+    font-family: $ff-accent;
+  }
+
+  &__imgIcon {
+    width: 6.25rem;
+  }
+
+  &__checkbox {
+    flex: 1 0 sz(20);
+    aspect-ratio: 1;
+    border: sz(2) solid black;
+    background-color: white;
+    border-radius: sz(4);
+    margin-block-start: sz(2);
+
+    input[type="checkbox"]:checked + & {
+      background-color: clr("primary", "500");
+    }
+  }
+}
