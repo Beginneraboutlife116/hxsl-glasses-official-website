@@ -21,6 +21,8 @@
   &[data-type="navigation"] {
     font-family: $ff-accent;
     border-block-end: 1px solid clr("neutral", "350");
+    padding-block: sz(16) sz(8);
+    padding-inline: 0;
 
     &.active {
       border-block-end: sz(8) solid clr("primary", "400");

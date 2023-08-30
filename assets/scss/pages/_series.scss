@@ -1,0 +1,47 @@
+@use "../abstract/" as *;
+
+.will-show {
+  display: none;
+
+  &[data-type="sm"] {
+    @include mq(sm) {
+      display: block;
+    }
+  }
+
+  &[data-type="md"] {
+    @include mq(md) {
+      display: block;
+    }
+  }
+}
+
+.item {
+  &__colors {
+    & > * {
+      width: sz(24);
+      aspect-ratio: 1;
+      border-radius: sz(4);
+    }
+  }
+}
+
+.series {
+  &__banner {
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__items {
+    --grid-gap: #{sz(24)};
+
+    @include mq(sm) {
+      --row-gap: #{sz(40)};
+    }
+
+    @include mq(md) {
+      --row-gap: #{sz(80)};
+    }
+  }
+}

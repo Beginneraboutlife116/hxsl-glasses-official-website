@@ -4,12 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact</title>
+    <title>series</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <%- include('./layout/secondary-navigation'); -%>
-    <%- include('./components/paginator'); -%>
+    <main>
+      <div class="container" style="--container-padding: 0px">
+        <%- include('./layout/secondary-navigation'); -%>
+      </div>
+      <div
+        class="container flex-group no-wrap my-end-40 my-end-md-80 | series__banner"
+        data-type="full-bleed"
+        style="--flex-gap: 0; --grow: 1"
+      >
+        <picture>
+          <source
+            srcset="../assets/images/product-header-1.avif"
+            type="image/avif"
+            media="(min-width: 800px)"
+          />
+          <source
+            srcset="../assets/images/product-header-1.webp"
+            type="image/webp"
+            media="(min-width: 800px)"
+          />
+          <source
+            srcset="../assets/images/product-header-sm-1.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="../assets/images/product-header-sm-1.webp"
+            type="image/webp"
+          />
+          <img src="../assets/images/product-header-sm-1.png" alt="" />
+        </picture>
+        <picture>
+          <source
+            srcset="../assets/images/product-header-2.avif"
+            type="image/avif"
+            media="(min-width: 800px)"
+          />
+          <source
+            srcset="../assets/images/product-header-2.webp"
+            type="image/webp"
+            media="(min-width: 800px)"
+          />
+          <source
+            srcset="../assets/images/product-header-sm-2.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="../assets/images/product-header-sm-2.webp"
+            type="image/webp"
+          />
+          <img src="../assets/images/product-header-sm-2.png" alt="" />
+        </picture>
+      </div>
+      <h1 class="tx-center heading-3 ff-accent fw-medium">Celluloid Combi</h1>
+      <h2 class="my-end-24 my-end-sm-32 tx-center heading-3">
+        賽璐珞鈦金屬混合鏡框
+      </h2>
+      <section class="series__items">
+        <div class="container auto-grid">
+          <% for (let i = 1; i <= 12; i++) { %>
+          <div
+            class="<%= i > 5 ? 'will-show' : '' %> item"
+            data-type="<%= i > 10 ? 'md' : i > 5 ? 'sm' : '' %>"
+          >
+            <picture>
+              <source
+                srcset="../assets/images/product-<%= i > 6 ? i - 6 : i %>.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="../assets/images/product-<%= i > 6 ? i - 6 : i %>.webp"
+                type="image/webp"
+              />
+              <img
+                src="../assets/images/product-<%= i > 6 ? i - 6 : i %>.png"
+                alt=""
+                loading="lazy"
+              />
+            </picture>
+            <p class="fs-600 flex-group between">
+              <span>BJ41600S</span><span class="clr-primary-400">NTD3,490</span>
+            </p>
+            <div class="flex-group | item__colors" style="--flex-gap: 0.5rem">
+              <div class="bg-primary-700"></div>
+              <div class="bg-primary-350"></div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </section>
+      <%- include('./components/paginator'); -%>
+    </main>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

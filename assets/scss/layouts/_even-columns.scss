@@ -1,0 +1,9 @@
+@use "../abstract/" as *;
+
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  column-gap: var(--grid-column-gap, var(--grid-gap, 1rem));
+  row-gap: var(--grid-row-gap, var(--grid-gap, 1rem));
+}
