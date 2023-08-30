@@ -1,9 +1,25 @@
 @use "../abstract/" as *;
 
-.b-1 {
+.b-1-900 {
   border: 1px solid #000;
 }
 
-.by-end-1 {
+.by-end-1-100 {
   border-block-end: 1px solid clr(neutral, "100");
+}
+
+.by-1-600 {
+  border-block: 1px solid clr(neutral, "600");
+}
+
+.bx-start-1-600 {
+  border-inline-start: 1px solid clr(neutral, "600");
+}
+
+.bx-end-1-600 {
+  border-inline-end: 1px solid clr("neutral", "600");
+}
+
+.bx-start-1-350 {
+  border-inline-start: 1px solid clr("neutral", "350");
 }

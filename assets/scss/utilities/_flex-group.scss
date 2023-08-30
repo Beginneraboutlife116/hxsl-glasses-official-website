@@ -24,7 +24,7 @@
   }
 
   & > * {
-    flex-basis: var(--width, auto);
+    flex: var(--grow, 0) var(--shrink, 1) var(--width, auto);
   }
 
   &.vertical {
