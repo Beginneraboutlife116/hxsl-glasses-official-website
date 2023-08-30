@@ -11,8 +11,8 @@
     <main>
       <div class="tx-right clr-primary-600 | home__hero">
         <div class="container">
-          <p>Promise-Desert 2020 早春系列</p>
-          <h1 class="fs-600 fw-bold">看得清，才能看得遠</h1>
+          <p class="heading-3">Promise-Desert 2020 早春系列</p>
+          <h1 class="heading-1 fw-bold">看得清，才能看得遠</h1>
           <a href="./series" class="button my-start-8 fs-550" data-type="accent"
             >立即購買</a
           >
@@ -20,10 +20,13 @@
       </div>
       <section class="section bg-neutral-250">
         <div class="container">
-          <h2 class="fs-600 clr-primary-600 tx-center my-end-24">
+          <h2 class="clr-primary-600 tx-center my-end-24 heading-2 fw-bold">
             用專業的心，做專業的事
           </h2>
-          <ul class="flow" style="--flow-spacer: 1.5rem">
+          <ul
+            class="auto-grid"
+            style="--grid-gap: 1.5rem; --children-width: 19.125rem"
+          >
             <li>
               <picture>
                 <source
@@ -40,7 +43,7 @@
                   alt=""
                 />
               </picture>
-              <h3 class="fs-600 clr-primary-600 tx-center my-end-8">
+              <h3 class="fs-600 clr-primary-600 tx-center my-end-8 fw-bold">
                 單一價格
               </h3>
               <p>無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。</p>
@@ -61,7 +64,7 @@
                   alt=""
                 />
               </picture>
-              <h3 class="fs-600 clr-primary-600 tx-center my-end-8">
+              <h3 class="fs-600 clr-primary-600 tx-center my-end-8 fw-bold">
                 20 分鐘即可取件
               </h3>
               <p>
@@ -85,7 +88,7 @@
                   alt=""
                 />
               </picture>
-              <h3 class="fs-600 clr-primary-600 tx-center my-end-8">
+              <h3 class="fs-600 clr-primary-600 tx-center my-end-8 fw-bold">
                 安心售後服務
               </h3>
               <p>
@@ -109,7 +112,7 @@
                   alt=""
                 />
               </picture>
-              <h3 class="fs-600 clr-primary-600 tx-center my-end-8">
+              <h3 class="fs-600 clr-primary-600 tx-center my-end-8 fw-bold">
                 關於鏡片
               </h3>
               <p>使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。</p>
@@ -119,10 +122,12 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="fs-600 clr-primary-600 tx-center fw-bold my-end-24">
+          <h2
+            class="heading-2 clr-primary-600 tx-center fw-bold my-end-24 my-end-sm-48"
+          >
             經典系列鏡框
           </h2>
-          <ul class="flow" style="--flow-spacer: 1.5rem">
+          <ul class="home__list" data-type="series">
             <li>
               <picture>
                 <source
@@ -188,20 +193,24 @@
       </section>
       <section class="section | home__banner">
         <div class="container">
-          <h2 class="fs-600 clr-neutral-100 fw-bold tx-center my-end-24">
+          <h2
+            class="clr-neutral-100 fw-bold tx-center my-end-24 my-end-sm-48 heading-2"
+          >
             聯名設計鏡框
           </h2>
-          <ul class="flow" style="--flow-spacer: 1.5rem">
+          <ul class="flow">
             <li>
               <div>
                 <div class="home__banner--img" data-type="double"></div>
-                <h3 class="bg-neutral-100 py-8 | home__title">DOUBLE A+</h3>
+                <h3 class="bg-neutral-100 py-8 fs-800 | home__title">
+                  DOUBLE A+
+                </h3>
               </div>
             </li>
             <li>
               <div>
                 <div class="home__banner--img" data-type="youth"></div>
-                <h3 class="bg-neutral-100 py-8 | home__title">YOUTH</h3>
+                <h3 class="bg-neutral-100 py-8 fs-800 | home__title">YOUTH</h3>
               </div>
             </li>
           </ul>
@@ -209,10 +218,12 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="clr-primary-600 fw-bold fs-600 my-end-24 tx-center">
+          <h2
+            class="clr-primary-600 fw-bold heading-2 my-end-24 my-end-sm-48 tx-center"
+          >
             顧客推薦
           </h2>
-          <ul class="flow">
+          <ul class="auto-grid | home__list" data-type="recommend">
             <li>
               <div class="card">
                 <picture>
@@ -317,15 +328,17 @@
         </div>
       </section>
       <section class="section bg-neutral-250">
-        <div class="container">
-          <h2 class="fs-600 clr-primary-600 fw-bold tx-center my-end-24">
+        <div class="container" data-type="narrow">
+          <h2
+            class="heading-2 clr-primary-600 fw-bold tx-center my-end-24 my-end-md-48"
+          >
             聯絡我們
           </h2>
           <p class="my-end-24">
             我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
           </p>
           <form class="flow">
-            <div class="flex-group vertical" style="--row-gap: 0.25rem">
+            <div class="flex-group vertical | home__input-group">
               <label for="name">姓名</label
               ><input
                 type="text"
@@ -335,7 +348,7 @@
                 class="px-12 py-6"
               />
             </div>
-            <div class="flex-group vertical" style="--row-gap: 0.25rem">
+            <div class="flex-group vertical | home__input-group">
               <label for="phone">聯絡電話</label
               ><input
                 type="text"
@@ -345,7 +358,7 @@
                 class="px-12 py-6"
               />
             </div>
-            <div class="flex-group vertical" style="--row-gap: 0.25rem">
+            <div class="flex-group vertical | home__input-group">
               <label for="email">電子郵件</label
               ><input
                 type="email"
@@ -355,7 +368,7 @@
                 class="px-12 py-6"
               />
             </div>
-            <div class="flex-group vertical" style="--row-gap: 0.25rem">
+            <div class="flex-group vertical | home__input-group">
               <label for="comment">意見反應</label
               ><textarea
                 name="comment"
@@ -376,7 +389,11 @@
                 >我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label
               >
             </div>
-            <button type="submit" class="button my-start-8 bg-primary-400" data-type="bold">
+            <button
+              type="submit"
+              class="button bg-primary-400"
+              data-type="form"
+            >
               確認送出
             </button>
           </form>

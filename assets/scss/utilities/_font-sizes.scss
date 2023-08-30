@@ -4,4 +4,14 @@
   .fs-#{$size-name} {
     font-size: $size-value;
   }
+  .fs-sm-#{$size-name} {
+    @include mq(sm) {
+      font-size: $size-value;
+    }
+  }
+  .fs-md-#{$size-name} {
+    @include mq(md) {
+      font-size: $size-value;
+    }
+  }
 }

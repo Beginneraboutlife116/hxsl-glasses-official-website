@@ -22,9 +22,17 @@
     font-family: $ff-accent;
   }
 
-  &[data-type="bold"] {
+  &[data-type="form"] {
+    display: block;
     color: clr(neutral, "100");
     width: 100%;
     padding-block: 1em;
+    margin-block-start: sz(24);
+    
+    @include mq(sm) {
+      max-width: 21rem;
+      margin-inline: auto;
+      margin-block-start: sz(48);
+    }
   }
 }

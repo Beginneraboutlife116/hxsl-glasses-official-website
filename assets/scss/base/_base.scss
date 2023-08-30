@@ -32,6 +32,12 @@ ul {
   list-style: none;
 }
 
+input,
+textarea {
+  border: 1px solid clr("neutral", "900");
+  background-color: inherit;
+}
+
 ::placeholder {
   color: clr(neutral, "425");
 }

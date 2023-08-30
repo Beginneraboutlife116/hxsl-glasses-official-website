@@ -35,6 +35,16 @@
       &-end-#{$size} {
         margin-block-end: $value;
       }
+      &-end-sm-#{$size} {
+        @include mq(sm) {
+          margin-block-end: $value;
+        }
+      }
+      &-end-md-#{$size} {
+        @include mq(md) {
+          margin-block-end: $value;
+        }
+      }
     }
     &-#{$size} {
       margin: $value;

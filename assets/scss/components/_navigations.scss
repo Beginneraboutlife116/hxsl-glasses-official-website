@@ -24,12 +24,11 @@
     --column-gap: #{sz(48)};
 
     display: block;
-    margin-block-end: #{sz(32)};
+    margin-block-end: #{sz(24)};
     padding-block: #{sz(8)};
   }
 
   @include mq(md) {
-    margin-block-end: #{sz(36)};
     padding-block: #{sz(12)};
   }
 }
