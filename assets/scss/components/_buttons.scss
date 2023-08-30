@@ -28,11 +28,36 @@
     width: 100%;
     padding-block: 1em;
     margin-block-start: sz(24);
-    
+
     @include mq(sm) {
       max-width: 21rem;
       margin-inline: auto;
       margin-block-start: sz(48);
+    }
+  }
+
+  &[data-type="paginator"] {
+    background-color: clr("neutral", "100");
+    color: clr("neutral", "600");
+    font-size: fs("400");
+    font-family: $ff-accent;
+    border-inline-end: 1px solid clr("neutral", "600");
+    padding-block: 0.75rem;
+
+    @include mq(sm) {
+      font-size: fs("450");
+    }
+
+    &.active {
+      background-color: clr("neutral", "900");
+      color: clr("neutral", "100");
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: clr("neutral", "200");
+        color: clr("neutral", "600");
+      }
     }
   }
 }

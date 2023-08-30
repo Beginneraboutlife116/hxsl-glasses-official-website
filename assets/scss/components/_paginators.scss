@@ -1,0 +1,11 @@
+@use "../abstract/" as *;
+
+.paginator {
+  --flex-gap: 0;
+  & > ul {
+    margin-inline: auto;
+    width: fit-content;
+    border-block: 1px solid clr(neutral, "600");
+    border-inline-start: 1px solid clr(neutral, "600");
+  }
+}

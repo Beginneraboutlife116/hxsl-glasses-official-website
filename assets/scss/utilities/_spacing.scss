@@ -29,6 +29,9 @@
       &-#{$size} {
         margin-block: $value;
       }
+      &-sm-#{$size} {
+        margin-block: $value;
+      }
       &-start-#{$size} {
         margin-block-start: $value;
       }
